@@ -1,1 +1,8 @@
-ipykernel
+langchain
+pandas
+PyPDF2
+openai
+streamlit
+python-dotenv
+
+-e .
