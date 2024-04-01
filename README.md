@@ -1,4 +1,4 @@
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2RjbjF3NnA1b3p0bzdkamRxNTV0YmN5Mjg2YXFyeXJiMWMwbDUwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/86mls1V94fU3AuTw9j/giphy.gif"  width="500"/>
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2RjbjF3NnA1b3p0bzdkamRxNTV0YmN5Mjg2YXFyeXJiMWMwbDUwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/86mls1V94fU3AuTw9j/giphy.gif"  width="400"/>
 
 # AI based MCQ Generator
 
