@@ -15,7 +15,7 @@ def readFile(fileName: str):
         data (str): Text
     """
 
-    if fileName.endswith(".pdf"):
+    if fileName.name.endswith(".pdf"):
         try:
             pdf = PyPDF2.PdfFileReader(fileName)
             data = ""
@@ -27,7 +27,7 @@ def readFile(fileName: str):
         except Exception as e:
             raise Exception("error reading the pdf file")
 
-    elif fileName.endswith(".txt"):
+    elif fileName.name.endswith(".txt"):
         return fileName.read().decode("utf-8")
 
     else:
