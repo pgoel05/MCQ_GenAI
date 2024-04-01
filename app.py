@@ -4,7 +4,7 @@ import traceback
 import pandas as pd
 from dotenv import load_dotenv
 import streamlit as st
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 from src.mcqGenerator.utils import readFile, formatData
 from src.mcqGenerator.mcqgenerator import chain
 from src.mcqGenerator.logger import logging
@@ -12,10 +12,19 @@ from src.mcqGenerator.logger import logging
 with open("response.json", "r") as file:
     RESPONSE_JSON = json.load(file)
 
-st.title("MCQ Generator")
+col1, col2 = st.columns([3, 7])
+
+with col1:
+    st.image("logo.png", width=100)  # You can adjust the width to fit your logo
+
+with col2:
+    st.title("MCQ Generator")
+
+# st.subheader("_Generate MCQs based on given data_",divider="rainbow")
+st.markdown("<h4 style='text-align: center; color: grey;'>Generate MCQs based on given data using LangChain 🦜️🔗</h4>", unsafe_allow_html=True)
 
 with st.form("User Input"):
-    uploadedFile = st.file_uploader("Upload data file (pdf or txt)")
+    uploadedFile = st.file_uploader("Upload data file (pdf or txt)", type=["pdf", "txt"])
 
     mcq_count = st.number_input(
         "Number of MCQs", min_value=3, max_value=50, placeholder=5

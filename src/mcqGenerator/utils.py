@@ -1,5 +1,5 @@
 import os
-import PyPDF2
+from PyPDF2 import PdfReader
 import json
 import traceback
 import pandas as pd
@@ -17,7 +17,7 @@ def readFile(fileName: str):
 
     if fileName.name.endswith(".pdf"):
         try:
-            pdf = PyPDF2.PdfFileReader(fileName)
+            pdf = PdfReader(fileName)
             data = ""
 
             for page in pdf.pages:
@@ -43,6 +43,7 @@ def formatData(quiz: str):
     Returns:
         quiz (df): quiz as a DataFrame
     """
+    quiz = json.loads(quiz)
     quiz_table_data = []
     for key, value in quiz.items():
         mcq = value["mcq"]
